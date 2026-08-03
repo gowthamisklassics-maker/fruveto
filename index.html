@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruveto | Fresh. Pure. Natural.</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header id="header" class="header">
+        <div class="nav-container">
+            <a href="#" class="official-fruveto-logo" data-view="view-home">
+                <div class="official-glass-logo">
+    <svg width="250" height="70" viewBox="0 0 250 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="animated-logo">
+        <defs>
+            <!-- Vibrant Multi-stop Gradients -->
+            <linearGradient id="fru-grad-adv" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#34A853"/>
+                <stop offset="40%" stop-color="#1E5631"/>
+                <stop offset="100%" stop-color="#0A2814"/>
+            </linearGradient>
+            
+            <linearGradient id="v-grad-adv" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#A5F24D"/>
+                <stop offset="50%" stop-color="#74B72E"/>
+                <stop offset="100%" stop-color="#3C6E12"/>
+            </linearGradient>
+            
+            <linearGradient id="eto-grad-adv" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFC078"/>
+                <stop offset="50%" stop-color="#F28C28"/>
+                <stop offset="100%" stop-color="#A65810"/>
+            </linearGradient>
+
+            <linearGradient id="leaf-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#B7F566"/>
+                <stop offset="60%" stop-color="#74B72E"/>
+                <stop offset="100%" stop-color="#2D540E"/>
+            </linearGradient>
+
+            <!-- Multi-layered 3D Drop Shadow -->
+            <filter id="ultra-shadow" x="-10" y="-10" width="300" height="100" filterUnits="userSpaceOnUse">
+                <!-- Inner Bevel simulation -->
+                <feOffset dx="1" dy="1" in="SourceAlpha" result="off1"/>
+                <feGaussianBlur stdDeviation="0.5" result="blur1"/>
+                <feComposite operator="out" in="SourceGraphic" in2="blur1" result="bevel"/>
+                <!-- Outer Drop Shadow -->
+                <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.15" result="shadow1"/>
+                <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1E5631" flood-opacity="0.1" result="shadow2"/>
+                <!-- Merge -->
+                <feMerge>
+                    <feMergeNode in="shadow2"/>
+                    <feMergeNode in="shadow1"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
+        </defs>
+        
+        <g filter="url(#ultra-shadow)">
+            <!-- Fruveto Text -->
+            <text x="18" y="42" font-family="'Inter', sans-serif" font-weight="800" font-size="42" fill="url(#fru-grad-adv)">Fru</text>
+            
+            <!-- v -->
+            <text x="86" y="42" font-family="'Inter', sans-serif" font-weight="800" font-size="42" fill="url(#v-grad-adv)">v</text>
+            
+            <!-- eto -->
+            <text x="113" y="42" font-family="'Inter', sans-serif" font-weight="800" font-size="42" fill="url(#eto-grad-adv)">eto</text>
+        </g>
+
+        <!-- Leaf over v -->
+        <g filter="drop-shadow(0px 2px 2px rgba(0,0,0,0.2))">
+            <path d="M 106 14 C 115 13, 121 16, 122 22 C 122 25, 115 27, 108 28 C 98 29, 98 20, 106 14 Z" fill="url(#leaf-grad)"/>
+            <path d="M 106 14 C 111 18, 115 21, 122 22" stroke="#1E5631" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+        </g>
+        
+        <!-- Tagline Lines (Gradient) -->
+        <line x1="18" y1="60" x2="65" y2="60" stroke="url(#fru-grad-adv)" stroke-width="2" stroke-linecap="round"/>
+        <line x1="205" y1="60" x2="245" y2="60" stroke="url(#eto-grad-adv)" stroke-width="2" stroke-linecap="round"/>
+        
+        <!-- Tagline Text -->
+        <text x="135" y="63" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#333333" letter-spacing="2.5" text-anchor="middle">FRESH. PURE. NATURAL.</text>
+    </svg>
+</div>
+            </a>
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="#" data-view="view-home">Home</a></li>
+                    <li><a href="#" data-view="view-products">Products</a></li>
+                    <li><a href="#" data-filter="bowls">Fresh Bowls</a></li>
+                    <li><a href="#" data-filter="juices">Juices</a></li>
+                    <li><a href="#" data-view="view-story">Our Story</a></li>
+                    <li><a href="#" data-view="view-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-btn" id="search-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn" id="login-btn" aria-label="User Profile"><i class="fa-regular fa-user"></i></button>
+                <button class="cart-btn" id="cart-btn" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+                <button class="mobile-toggle icon-btn" aria-label="Toggle Menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="app-main">
+        
+        <!-- ================= VIEW: HOME ================= -->
+        <div id="view-home" class="page-view active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-container">
+                    <div class="hero-content fade-up">
+                        <span class="small-label">FRESHLY PREPARED &bull; NATURALLY DELICIOUS</span>
+                        <h1 class="main-heading">Nourish Your Body.<br><em>Naturally</em> Every Day.</h1>
+                        <p class="hero-description">
+                            Discover handcrafted fruit bowls, cold-pressed juices, refreshing smoothies, and wholesome snacks made from carefully selected natural ingredients.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" data-filter="bowls">Shop Fresh</button>
+                            <button class="btn btn-secondary" data-view="view-products">Explore Menu</button>
+                        </div>
+                        <div class="hero-features">
+                            <div class="feature-item"><i class="fa-solid fa-truck-fast"></i><span>Same-Day Fresh Delivery</span></div>
+                            <div class="feature-item"><i class="fa-solid fa-leaf"></i><span>100% Natural Ingredients</span></div>
+                        </div>
+                    </div>
+                    <div class="hero-visual fade-left">
+                        <div class="visual-wrapper">
+                            <img src="assets/images/hero.jpg" alt="Fresh fruit bowls and cold-pressed juices" class="hero-image">
+                            <div class="visual-badge">
+                                <div class="badge-ring"></div>
+                                <span>Made Fresh Daily</span>
+                            </div>
+                            <div class="visual-badge rating-badge">
+                                <i class="fa-solid fa-star" style="color:var(--orange-accent);"></i>
+                                <span><strong>4.9/5</strong> (12k+ Customers)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Why Choose Us -->
+            <section class="why-us-section">
+                <div class="container">
+                    <h2 class="section-title center fade-up">The Fruveto Difference</h2>
+                    <div class="features-grid">
+                        <div class="feature-box fade-up"><div class="feature-icon"><i class="fa-solid fa-seedling"></i></div><h4>Farm Fresh Ingredients</h4></div>
+                        <div class="feature-box fade-up" style="transition-delay: 0.1s"><div class="feature-icon"><i class="fa-solid fa-calendar-day"></i></div><h4>Prepared Daily</h4></div>
+                        <div class="feature-box fade-up" style="transition-delay: 0.2s"><div class="feature-icon"><i class="fa-solid fa-ban"></i></div><h4>No Preservatives</h4></div>
+                        <div class="feature-box fade-up" style="transition-delay: 0.3s"><div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div><h4>Fast Delivery</h4></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Newsletter -->
+            <section class="newsletter-section">
+                <div class="container">
+                    <div class="newsletter-card fade-up">
+                        <h2 class="section-title">Stay Fresh With Fruveto</h2>
+                        <p>Subscribe to receive healthy recipes, seasonal offers, and exclusive updates.</p>
+                        <form class="newsletter-form" onsubmit="event.preventDefault();">
+                            <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                    
+                                        </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= VIEW: PRODUCTS (ALL CATEGORIES) ================= -->
+        <div id="view-products" class="page-view hidden">
+            <section class="categories-section">
+                <div class="container">
+                    <div class="section-header center fade-up">
+                        <h2 class="section-title">All Categories</h2>
+                        <p class="section-subtitle">Tap on any category image to view items</p>
+                        <div class="filter-pills">
+                            <button class="filter-pill active" data-filter="all">All Categories</button>
+                            <button class="filter-pill" data-filter="bowls">Bowls</button>
+                            <button class="filter-pill" data-filter="juices">Juices</button>
+                            <button class="filter-pill" data-filter="smoothies">Smoothies</button>
+                            <button class="filter-pill" data-filter="snacks">Snacks</button>
+                        </div>
+                    </div>
+                    <div class="category-grid">
+                        <div class="category-card fade-up cursor-pointer" data-filter="bowls">
+                            <div class="card-image-wrapper"><img src="assets/images/cat-bowls.jpg" alt="Fruit Bowls"></div>
+                            <div class="card-content"><h3>Fruit Bowls</h3><p>Fresh seasonal fruits & acai blends.</p><span class="explore-link">View Bowls <i class="fa-solid fa-arrow-right"></i></span></div>
+                        </div>
+                        <div class="category-card fade-up cursor-pointer" style="transition-delay: 0.1s" data-filter="juices">
+                            <div class="card-image-wrapper"><img src="assets/images/cat-juices.jpg" alt="Juices"></div>
+                            <div class="card-content"><h3>Cold-Pressed Juices</h3><p>100% Raw vitamins & detox blends.</p><span class="explore-link">View Juices <i class="fa-solid fa-arrow-right"></i></span></div>
+                        </div>
+                        <div class="category-card fade-up cursor-pointer" style="transition-delay: 0.2s" data-filter="smoothies">
+                            <div class="card-image-wrapper"><img src="assets/images/cat-smoothies.jpg" alt="Smoothies"></div>
+                            <div class="card-content"><h3>Smoothies</h3><p>Creamy fruit & protein blends.</p><span class="explore-link">View Smoothies <i class="fa-solid fa-arrow-right"></i></span></div>
+                        </div>
+                        <div class="category-card fade-up cursor-pointer" style="transition-delay: 0.3s" data-filter="snacks">
+                            <div class="card-image-wrapper"><img src="assets/images/cat-snacks.jpg" alt="Snacks"></div>
+                            <div class="card-content"><h3>Healthy Snacks</h3><p>Nutritious energy bites & granola.</p><span class="explore-link">View Snacks <i class="fa-solid fa-arrow-right"></i></span></div>
+                        </div>
+                    </div>
+                    <div class="product-grid" id="main-product-grid" style="display: none;">
+
+                        <div class="product-card fade-up" data-category="bowls">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-mango-bowl.jpg" alt="Tropical Mango Bowl" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p1" data-name="Tropical Mango Bowl" data-price="1050" data-img="prod-mango-bowl.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Tropical Mango Bowl</h4>
+                                <p class="product-desc">Fresh mango, coconut flakes, chia seeds, and kiwi.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">र 1,050</span>
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p1" data-name="Tropical Mango Bowl" data-price="1050" data-img="prod-mango-bowl.jpg"><i class="fa-solid fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card fade-up" data-category="bowls" style="transition-delay: 0.1s">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-berry-bliss.jpg" alt="Berry Bliss Bowl" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p2" data-name="Berry Bliss Bowl" data-price="1100" data-img="prod-berry-bliss.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Berry Bliss Bowl</h4>
+                                <p class="product-desc">Acai blend topped with fresh mixed berries and granola.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">र 1,100</span>
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p2" data-name="Berry Bliss Bowl" data-price="1100" data-img="prod-berry-bliss.jpg"><i class="fa-solid fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="product-card fade-up" data-category="juices">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-citrus.jpg" alt="Citrus Energy Juice" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p3" data-name="Citrus Energy Juice" data-price="650" data-img="prod-citrus.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Citrus Energy Juice</h4>
+                                <p class="product-desc">Cold-pressed orange, grapefruit, lemon, and ginger.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">र 650</span>
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p3" data-name="Citrus Energy Juice" data-price="650" data-img="prod-citrus.jpg"><i class="fa-solid fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card fade-up" data-category="juices" style="transition-delay: 0.1s">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-detox.jpg" alt="Green Detox Smoothie" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p4" data-name="Green Detox Smoothie" data-price="700" data-img="prod-detox.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Green Detox Smoothie</h4>
+                                <p class="product-desc">Spinach, green apple, cucumber, and mint blend.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">र 700</span>
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p4" data-name="Green Detox Smoothie" data-price="700" data-img="prod-detox.jpg"><i class="fa-solid fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="product-card fade-up" data-category="smoothies">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-berry-smoothie.jpg" alt="Berry Blast Smoothie" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p5" data-name="Berry Blast Smoothie" data-price="850" data-img="prod-berry-smoothie.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Berry Blast Smoothie</h4>
+                                <p class="product-desc">Mixed berries, banana, and almond milk.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">र 850</span>
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p5" data-name="Berry Blast Smoothie" data-price="850" data-img="prod-berry-smoothie.jpg"><i class="fa-solid fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card fade-up" data-category="smoothies" style="transition-delay: 0.1s">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-mango-smoothie.jpg" alt="Tropical Mango Smoothie" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p7" data-name="Tropical Mango Smoothie" data-price="750" data-img="prod-mango-smoothie.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Tropical Mango Smoothie</h4>
+                                <p class="product-desc">Ripe mango, pineapple, coconut milk, and mint.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">र 750</span>
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p7" data-name="Tropical Mango Smoothie" data-price="750" data-img="prod-mango-smoothie.jpg"><i class="fa-solid fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card fade-up" data-category="smoothies" style="transition-delay: 0.2s">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-avocado.jpg" alt="Avocado Green Protein" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p8" data-name="Avocado Green Protein" data-price="800" data-img="prod-avocado.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Avocado Green Protein</h4>
+                                <p class="product-desc">Avocado, spinach, matcha, and plant protein blend.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">र 800</span>
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p8" data-name="Avocado Green Protein" data-price="800" data-img="prod-avocado.jpg"><i class="fa-solid fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card fade-up" data-category="smoothies" style="transition-delay: 0.3s">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-pb.jpg" alt="Peanut Butter Power" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p9" data-name="Peanut Butter Power" data-price="900" data-img="prod-pb.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Peanut Butter Power</h4>
+                                <p class="product-desc">Peanut butter, cocoa powder, banana, and oat milk.</p>
+                                <div class="product-price-row">
+                                    <span class="product-price">र 900</span>
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p9" data-name="Peanut Butter Power" data-price="900" data-img="prod-pb.jpg"><i class="fa-solid fa-plus"></i> Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="product-card fade-up" data-category="snacks">
+                            <div class="product-image-container">
+                                <img src="assets/images/cat-snacks.jpg" alt="Oat Energy Balls" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p6" data-name="Oat Energy Balls" data-price="450" data-img="cat-snacks.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Oat Energy Balls</h4>
+                                <p class="product-desc">Oats, peanut butter, chia seeds, and dark chocolate.</p>
+                                <span class="product-price">र 450</span>
+                            </div>
+                        </div>
+                        <div class="product-card fade-up" data-category="snacks" style="transition-delay: 0.1s">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-granola.jpg" alt="Almond Granola Clusters" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p10" data-name="Almond Granola Clusters" data-price="500" data-img="prod-granola.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Almond Granola Clusters</h4>
+                                <p class="product-desc">Baked rolled oats, almonds, honey, and cranberries.</p>
+                                <span class="product-price">र 500</span>
+                            </div>
+                        </div>
+                        <div class="product-card fade-up" data-category="snacks" style="transition-delay: 0.2s">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-chia-pudding.jpg" alt="Raw Chia Pudding Cup" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p11" data-name="Raw Chia Pudding Cup" data-price="400" data-img="prod-chia-pudding.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Raw Chia Pudding Cup</h4>
+                                <p class="product-desc">Coconut milk chia seed pudding topped with fresh fruit.</p>
+                                <span class="product-price">र 400</span>
+                            </div>
+                        </div>
+                        <div class="product-card fade-up" data-category="snacks" style="transition-delay: 0.3s">
+                            <div class="product-image-container">
+                                <img src="assets/images/prod-veggie.jpg" alt="Roasted Veggie Chips" class="product-image">
+                                <div class="product-overlay">
+                                    <button class="btn btn-primary add-to-cart-btn" data-id="p12" data-name="Roasted Veggie Chips" data-price="350" data-img="prod-veggie.jpg"><i class="fa-solid fa-plus"></i> Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4 class="product-name">Roasted Veggie Chips</h4>
+                                <p class="product-desc">Crispy oven-baked beetroot, sweet potato, and kale chips.</p>
+                                <span class="product-price">र 350</span>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </div>
+
+        
+
+        
+
+        <!-- ================= VIEW: OUR STORY ================= -->
+        <div id="view-story" class="page-view hidden">
+            <section class="about-section">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-image-wrapper fade-up">
+                            <img src="assets/images/about.jpg" alt="Preparing fresh ingredients" class="about-image">
+                        </div>
+                        <div class="about-text fade-up">
+                            <h2 class="section-title">Fresh Food <br>Crafted With Care</h2>
+                            <p>At Fruveto, we believe healthy eating should be simple, delicious, and accessible. Every bowl, juice, and smoothie is prepared using fresh fruits and premium ingredients without artificial flavors or preservatives.</p>
+                            <p>Our commitment to purity means you get nature's best in every bite and sip.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sustainability-section">
+                <div class="container">
+                    <div class="sustainability-content fade-up">
+                        <h2 class="section-title">Good For You. Better For The Planet.</h2>
+                        <ul class="sustainability-list">
+                            <li><i class="fa-solid fa-check"></i> Sustainable sourcing from local farms</li>
+                            <li><i class="fa-solid fa-check"></i> 100% Eco-friendly and compostable packaging</li>
+                            <li><i class="fa-solid fa-check"></i> Actively reducing food waste in our kitchens</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= VIEW: CONTACT ================= -->
+        <div id="view-contact" class="page-view hidden">
+            <section class="contact-section">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-info fade-up">
+                            <h2 class="section-title">Get in Touch</h2>
+                            <p>Have questions about our ingredients or want to place a large order? We're here to help.</p>
+                            <div class="contact-details">
+                                <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><h5>Email</h5><p>hello@fruveto.com</p></div></div>
+                                <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><h5>Store Location</h5><p>123 Wellness Blvd</p></div></div>
+                            </div>
+                        </div>
+                        <div class="contact-map fade-up" style="transition-delay: 0.2s">
+                            <div class="map-placeholder">
+                                <div class="map-inner"><i class="fa-solid fa-envelope-open-text"></i><span>Contact Form</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fruveto. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS & DRAWERS ================= -->
+    
+    <!-- Cart Drawer -->
+    <div class="overlay" id="cart-overlay"></div>
+    <div class="drawer" id="cart-drawer">
+        <div class="drawer-header">
+            <h2>Your Bag</h2>
+            <button class="close-btn" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="drawer-body" id="cart-items">
+            <!-- Dynamic Cart Items Go Here -->
+            <p class="empty-msg">Your bag is currently empty.</p>
+        </div>
+        <div class="drawer-footer">
+            <div class="cart-total"><span>Total</span><span id="cart-total-price">र 0</span></div>
+            <button class="btn btn-primary w-100" id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="overlay" id="login-overlay"></div>
+    <div class="modal" id="login-modal">
+        <button class="close-btn modal-close"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="section-title center">Welcome Back</h2>
+        <form class="auth-form" onsubmit="event.preventDefault(); alert('Login Successful!'); document.getElementById('login-modal').classList.remove('active'); document.getElementById('login-overlay').classList.remove('active');">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" required placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="overlay" id="search-overlay"></div>
+    <div class="modal search-modal" id="search-modal">
+        <button class="close-btn modal-close"><i class="fa-solid fa-xmark"></i></button>
+        <form class="search-form" onsubmit="event.preventDefault(); const val = this.querySelector('input').value; this.innerHTML = '<div style=\'text-align:center; width:100%\'><h3 style=\'color: var(--primary-green); margin-bottom: 0.5rem;\'>Searching...</h3><p>Looking for \'' + val + '\'</p></div>'; setTimeout(() => document.querySelectorAll('.overlay, .modal').forEach(e => e.classList.remove('active')), 1500);">
+            <input type="text" placeholder="Search for juices, bowls..." autofocus>
+            <button type="submit" class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="overlay" id="checkout-overlay"></div>
+    <div class="modal" id="checkout-modal">
+        <button class="close-btn modal-close"><i class="fa-solid fa-xmark"></i></button>
+        <h2 class="section-title center" style="margin-bottom:1rem;">Complete Your Order</h2>
+        <div id="checkout-body">
+            <form class="auth-form" id="checkout-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Delivery Address</label>
+                    <input type="text" required placeholder="Flat No, Street, Landmark">
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select required style="width:100%; padding:0.9rem; border-radius:12px; border:1px solid rgba(0,0,0,0.1); background:rgba(255,255,255,0.7); outline:none; font-family:inherit;">
+                        <option value="upi">UPI (GPay / PhonePe / Paytm)</option>
+                        <option value="cod">Cash on Delivery (COD)</option>
+                        <option value="card">Credit / Debit Card</option>
+                    </select>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin:1.5rem 0; font-weight:700; font-size:1.1rem; color:var(--primary-green);">
+                    <span>Amount Payable</span>
+                    <span id="checkout-total-val">र 0</span>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Place Order Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
