@@ -94,8 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (activeFilter === 'all') {
                 if (document.getElementById('main-category-grid')) document.getElementById('main-category-grid').style.display = 'grid';
                 if (document.getElementById('main-product-grid')) {
-                    document.getElementById('main-product-grid').style.display = 'grid';
-                    document.querySelectorAll('#main-product-grid .product-card').forEach(card => card.style.display = 'block');
+                    document.getElementById('main-product-grid').style.display = 'none';
                 }
             } else {
                 if (document.getElementById('main-category-grid')) document.getElementById('main-category-grid').style.display = 'none';
