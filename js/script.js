@@ -523,29 +523,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // FLOATING WIDGETS & NEW FEATURES
     // ==========================================
 
-    // 1. Dark Mode Toggle
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    
-    // Check local storage for theme
-    if (localStorage.getItem('theme') === 'dark') {
-        body.classList.add('dark-theme');
-        if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-    }
-
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            if (body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-                themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-            } else {
-                localStorage.setItem('theme', 'light');
-                themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-            }
-        });
-    }
-
     // 2. Scroll to Top Button
     const scrollTopBtn = document.getElementById('scroll-top-btn');
     if (scrollTopBtn) {
