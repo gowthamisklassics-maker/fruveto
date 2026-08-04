@@ -528,3 +528,82 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+    // ==========================================
+    // FLOATING WIDGETS & NEW FEATURES
+    // ==========================================
+
+    // 1. Dark Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check local storage for theme
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-theme');
+        if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            if (body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+            }
+        });
+    }
+
+    // 2. Scroll to Top Button
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    if (scrollTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // 3. Mobile Navigation Drawer
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    
+    if (mobileToggle) {
+        // Remove old alert if it exists by replacing the node (quickest way to remove anon listeners)
+        const newMobileToggle = mobileToggle.cloneNode(true);
+        mobileToggle.parentNode.replaceChild(newMobileToggle, mobileToggle);
+        
+        newMobileToggle.addEventListener('click', () => {
+            openModal(mobileDrawer, mobileOverlay);
+        });
+    }
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            closeModal(mobileDrawer, mobileOverlay);
+        });
+    });
+
+    // 4. Newsletter Toast
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            if (emailInput && emailInput.value) {
+                showToast('Newsletter Subscribed!', 'cat-juices.jpg'); // Reusing existing toast logic
+                emailInput.value = '';
+            }
+        });
+    }
+
+});
+
