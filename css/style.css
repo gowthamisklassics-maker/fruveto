@@ -690,11 +690,11 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
 @media (max-width: 768px) {
     :root {
-        --screen-margin: 1rem;
-        --section-pad: 2.5rem 0;
-        --card-pad: 1.2rem;
-        --touch-target: 1rem 1.5rem;
-        --grid-gap: 1.5rem;
+        --screen-margin: 1.5rem;
+        --section-pad: 3.5rem 0;
+        --card-pad: 1.8rem;
+        --touch-target: 1.2rem 2rem;
+        --grid-gap: 2.5rem;
     }
     .desktop-nav { display: none; }
     .mobile-toggle { display: flex; }
