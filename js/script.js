@@ -519,16 +519,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Menu Toggle
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    if (mobileToggle) {
-        mobileToggle.addEventListener('click', () => {
-            alert('Mobile navigation menu active.');
-        });
-    }
-});
-
-
     // ==========================================
     // FLOATING WIDGETS & NEW FEATURES
     // ==========================================
@@ -573,6 +563,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. Mobile Navigation Drawer
+    const mobileToggle = document.querySelector('.mobile-toggle');
     const mobileDrawer = document.getElementById('mobile-drawer');
     const mobileOverlay = document.getElementById('mobile-overlay');
     
@@ -606,4 +597,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
 
